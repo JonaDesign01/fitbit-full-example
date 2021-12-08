@@ -8,4 +8,8 @@
     <set href="text" attributeName="text-buffer" to="Replace" />
     <set href="handle" attributeName="id" to="replace-button" />
   </use>
+  <use href="#button" fill="#a91e63" x="10%" y="100%-250" width="80%">
+    <set href="text" attributeName="text-buffer" to="Library" />
+    <set href="handle" attributeName="id" to="library-button" />
+  </use>
 </svg>

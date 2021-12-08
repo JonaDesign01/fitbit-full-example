@@ -1,3 +1,15 @@
-<svg>
-<circle cx="50%" cy="50%" r="80" fill="red" />
+<svg viewport-fill="#000000">
+  <textarea fill="#FFFF00" x="18" y="3" width="300" height="110" font-size="36" font-family="System-Regular" text-anchor="middle" text-buffer="Welcome!" />
+  <use href="#button" fill="#2fc4ba" x="10%" y="100%-170" width="80%">
+    <set href="text" attributeName="text-buffer" to="Detail" />
+    <set href="handle" attributeName="id" to="detail-button" />
+  </use>
+  <use href="#button" fill="#a91e63" x="10%" y="100%-90" width="80%">
+    <set href="text" attributeName="text-buffer" to="Replace" />
+    <set href="handle" attributeName="id" to="replace-button" />
+  </use>
+  <use href="#button" fill="#a91e63" x="10%" y="100%-250" width="80%">
+    <set href="text" attributeName="text-buffer" to="Replace" />
+    <set href="handle" attributeName="id" to="library" />
+  </use>
 </svg>
