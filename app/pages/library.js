@@ -1,36 +1,46 @@
 import document from 'document';
-import { getLocationName } from '../commands';
-import { getStateItem, setStateCallback, removeStateCallback } from '../state';
+import { switchPage } from '../navigation';
+import { setStateCallback, removeStateCallback } from '../state';
 
 let $button = null;
-let $locationName = null;
-
-function doSomething() {
-  console.log('hallo detail');
-}
-
-function draw() {
-  $locationName.text = getStateItem('location');
-}
+let $button1 = null;
+let $button2 = null;
+//let $item1 = null;
+let $item2 = null;
 
 export function destroy() {
-  console.log('destroy detail page');
-  $locationName = null;
+  $button1 = null;
+  $button2 = null;
+  //  $item1 = null;
+  $item2 = null;
   $button = null;
-  removeStateCallback('detail');
+  removeStateCallback('library');
 }
 
 export function init() {
-  console.log('init detail page');
-  $locationName = document.getElementById('location');
+  //$item1 = document.getElementById('item1');
+  $button1 = document.getElementById('button-1');
+  $item2 = document.getElementById('item2');
+  $button2 = document.getElementById('button-2');
   $button = document.getElementById('back-button');
+
+  //function eliminate() {
+  //  let obj = document.getElementById('item1');
+  //  obj.remove();
+  //  }
+
   $button.onclick = () => {
     destroy();
-    document.history.back();
+    switchPage('startscherm');
   };
 
-  doSomething();
-  getLocationName();
-  setStateCallback('detail', draw);
-  // draw();
+  $item2.onclick = () => {};
+
+  $button1.onclick = () => {
+    //eliminate();
+  };
+
+  $button2.onclick = () => {};
+
+  setStateCallback('library');
 }

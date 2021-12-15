@@ -5,11 +5,16 @@
     <link rel="stylesheet" href="pages/replace.css" />
     <link rel="stylesheet" href="pages/detail.css" />
     <link rel="stylesheet" href="pages/index.css" />
+    <link rel="stylesheet" href="pages/library.css" />
+    <link rel="stylesheet" href="pages/startscherm.css" />
 
     <link rel="stylesheet" href="components/button.css" />
 
     <link rel="import" href="/mnt/sysassets/system_widget.defs" />
 
     <link rel="import" href="components/button.gui" />
+
+    <link rel="import" href="/mnt/sysassets/widgets/icon_button.defs" />
+
   </defs>
 </svg>

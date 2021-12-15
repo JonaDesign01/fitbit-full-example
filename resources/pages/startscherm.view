@@ -1,0 +1,12 @@
+<svg viewport-fill="#000000">
+
+<use id="buttonNew" href="#icon-button" x="10%" y="100%-240" class="large-button application-fill plus-button"/>
+
+<use id="buttonHam" href="#icon-button" x="65%" y="100%-240" class="large-button application-fill plus-button"/>
+
+
+
+    <rect id="vl" x="170"  width="5" height="400" fill="white"/>
+
+
+</svg>

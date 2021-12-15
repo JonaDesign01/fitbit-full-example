@@ -1,7 +1,24 @@
 <svg viewport-fill="#000000">
-  <textarea fill="#62ff00" x="18" y="10" width="300" height="110" font-size="30" font-family="System-Regular" text-anchor="middle" text-buffer="library" />
-  <text id="location" fill="white" x="50%" y="100" width="300" font-size="36" font-family="System-Regular" text-anchor="middle" text-length="20" text-buffer="loading" />
-  <use href="#button" fill="#00FFFF" x="10%" y="100%-90" width="80%">
+  <textarea fill="white" x="18" y="10" width="300" height="110" font-size="30" font-family="System-Regular" text-anchor="middle" text-buffer="Library" />
+
+
+  <use href="#button" fill="white" x="10%" y="100%-260" width="70%">
+    <set href="text" attributeName="text-buffer" to="item1" />
+    <set href="handle" attributeName="id" to="item1" />
+  </use>
+
+
+  <use id="button-1" href="#icon-button"  x="80%" y="100%-275" width="20%" class="large-button application-fill plus-button"/>
+
+  <use href="#button" fill="white" x="10%" y="100%-180" width="70%">
+    <set href="text" attributeName="text-buffer" to="item2" />
+    <set href="handle" attributeName="id" to="item2" />
+  </use>
+
+<use id="button-2" href="#icon-button" x="80%" y="100%-195" width="20%" class="large-button application-fill plus-button"/>
+
+
+  <use href="#button" fill="white" x="10%" y="100%-90" width="80%">
     <set href="text" attributeName="text-buffer" to="Back" />
     <set href="handle" attributeName="id" to="back-button" />
   </use>

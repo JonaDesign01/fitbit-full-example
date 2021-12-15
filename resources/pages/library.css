@@ -1,0 +1,21 @@
+#button-1 {
+}
+
+#button-1 #text {
+  text-buffer: '';
+}
+
+#button-1 #image {
+  href: 'trash.png';
+}
+
+#button-2 {
+}
+
+#button-2 #text {
+  text-buffer: '';
+}
+
+#button-2 #image {
+  href: 'trash.png';
+}
