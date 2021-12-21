@@ -23,20 +23,20 @@ export function init() {
 
   $buttonRood.onclick = () => {
     destroy();
-    switchPage('library');
+    switchPage('detail');
   };
 
   $buttonBlauw.onclick = () => {
     destroy();
-    switchPage('library');
+    switchPage('detail');
   };
   $buttonGeel.onclick = () => {
     destroy();
-    switchPage('library');
+    switchPage('detail');
   };
   $buttonWit.onclick = () => {
     destroy();
-    switchPage('library');
+    switchPage('detail');
   };
 
   setStateCallback('startscherm');
