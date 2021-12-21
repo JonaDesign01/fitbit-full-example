@@ -1,0 +1,27 @@
+#buttonHam {
+}
+
+#buttonHam #text {
+  text-buffer: '';
+}
+
+#buttonHam #image {
+  href: 'hamburger2.png';
+}
+
+#buttonNew {
+}
+
+#buttonNew #text {
+  text-buffer: '';
+}
+
+#buttonNew #image {
+  href: 'plus2.png';
+}
+
+#vl {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}

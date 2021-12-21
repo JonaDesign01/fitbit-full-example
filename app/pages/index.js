@@ -1,28 +1,29 @@
 import document from 'document';
 import { switchPage } from '../navigation';
+import { setStateCallback, removeStateCallback } from '../state';
 
-let $buttonDetail = null;
-let $buttonReplace = null;
-let $buttonLibrary = null;
+let $buttonNew = null;
+let $buttonHam = null;
 
 export function destroy() {
-  $buttonDetail = null;
-  $buttonReplace = null;
-  $buttonLibrary = null;
+  $buttonNew = null;
+  $buttonHam = null;
+  removeStateCallback('index');
 }
 
 export function init() {
-  $buttonDetail = document.getElementById('detail-button');
-  $buttonReplace = document.getElementById('replace-button');
-  $buttonLibrary = document.getElementById('library-button');
+  $buttonNew = document.getElementById('buttonNew');
+  $buttonHam = document.getElementById('buttonHam');
 
-  $buttonDetail.onclick = () => {
-    switchPage('detail', true);
+  $buttonNew.onclick = () => {
+    destroy();
+    switchPage('kiespagina');
   };
-  $buttonReplace.onclick = () => {
-    switchPage('replace');
-  };
-  $buttonLibrary.onclick = () => {
+
+  $buttonHam.onclick = () => {
+    destroy();
     switchPage('library');
   };
+
+  setStateCallback('index');
 }

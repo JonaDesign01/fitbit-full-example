@@ -1,5 +1,6 @@
 import document from 'document';
 import { getLocationName } from '../commands';
+import { switchPage } from '../navigation';
 import { getStateItem, setStateCallback, removeStateCallback } from '../state';
 
 let $button = null;
@@ -32,7 +33,7 @@ export function init() {
   $map = document.getElementById('map');
   $button.onclick = () => {
     destroy();
-    document.history.back();
+    switchPage('index');
   };
 
   doSomething();

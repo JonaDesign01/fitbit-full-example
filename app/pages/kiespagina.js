@@ -12,7 +12,7 @@ export function destroy() {
   $buttonBlauw = null;
   $buttonGeel = null;
   $buttonWit = null;
-  removeStateCallback('startscherm');
+  removeStateCallback('index');
 }
 
 export function init() {
@@ -39,5 +39,5 @@ export function init() {
     switchPage('detail');
   };
 
-  setStateCallback('startscherm');
+  setStateCallback('index');
 }
