@@ -16,7 +16,7 @@
   },
   "fitbit": {
     "appType": "app",
-    "appDisplayName": "Fitbit Full Example",
+    "appDisplayName": "Pin-up",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
@@ -36,5 +36,8 @@
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "volta": {
+    "node": "14.18.2"
   }
 }
