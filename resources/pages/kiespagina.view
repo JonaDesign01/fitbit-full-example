@@ -1,0 +1,11 @@
+<svg viewport-fill="#000000">
+
+<use id="buttonRood" href="#icon-button" x="10%" y="100%-300" class="large-button application-fill plus-button"/>
+
+<use id="buttonBlauw" href="#icon-button" x="65%" y="100%-300" class="large-button application-fill plus-button"/>
+
+<use id="buttonGeel" href="#icon-button" x="10%" y="100%-150" class="large-button application-fill plus-button"/>
+
+<use id="buttonWit" href="#icon-button" x="65%" y="100%-150" class="large-button application-fill plus-button"/>
+
+</svg>

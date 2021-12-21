@@ -15,7 +15,10 @@ export function init() {
   $buttonNew = document.getElementById('buttonNew');
   $buttonHam = document.getElementById('buttonHam');
 
-  $buttonNew.onclick = () => {};
+  $buttonNew.onclick = () => {
+    destroy();
+    switchPage('kiespagina');
+  };
 
   $buttonHam.onclick = () => {
     destroy();

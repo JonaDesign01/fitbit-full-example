@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="pages/index.css" />
     <link rel="stylesheet" href="pages/library.css" />
     <link rel="stylesheet" href="pages/startscherm.css" />
+    <link rel="stylesheet" href="pages/kiespagina.css" />
 
     <link rel="stylesheet" href="components/button.css" />
 

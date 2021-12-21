@@ -1,0 +1,44 @@
+#buttonRood {
+}
+
+#buttonRood #text {
+  text-buffer: '';
+}
+
+#buttonRood #image {
+  href: 'rodepin.png';
+  fill: fb-red;
+}
+
+#buttonBlauw {
+}
+
+#buttonBlauw #text {
+  text-buffer: '';
+}
+
+#buttonBlauw #image {
+  href: 'blauwepin.png';
+}
+
+#buttonGeel {
+}
+
+#buttonGeel #text {
+  text-buffer: '';
+}
+
+#buttonGeel #image {
+  href: 'gelepin.png';
+}
+
+#buttonWit {
+}
+
+#buttonWit #text {
+  text-buffer: '';
+}
+
+#buttonWit #image {
+  href: 'whitepin.png';
+}
