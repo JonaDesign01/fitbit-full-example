@@ -18,7 +18,7 @@
     "appType": "app",
     "appDisplayName": "Pin-up",
     "iconFile": "resources/icon.png",
-    "wipeColor": "#ffffff",
+    "wipeColor": "#00e5ff",
     "requestedPermissions": [],
     "buildTargets": [
       "atlas",
