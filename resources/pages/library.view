@@ -3,7 +3,7 @@
 
 
   <use href="#button" fill="white" x="10%" y="100%-260" width="70%">
-    <set href="text" attributeName="text-buffer" to="item1" />
+    <set href="text" attributeName="text-buffer" to="Locatie 1" />
     <set href="handle" attributeName="id" to="item1" />
   </use>
 
@@ -11,7 +11,7 @@
   <use id="button-1" href="#icon-button"  x="80%" y="100%-275" width="20%" class="large-button application-fill plus-button"/>
 
   <use href="#button" fill="white" x="10%" y="100%-180" width="70%">
-    <set href="text" attributeName="text-buffer" to="item2" />
+    <set href="text" attributeName="text-buffer" to="Locatie 2" />
     <set href="handle" attributeName="id" to="item2" />
   </use>
 

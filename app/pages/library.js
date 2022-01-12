@@ -34,9 +34,15 @@ export function init() {
     switchPage('index');
   };
 
-  $item1.onclick = () => {};
+  $item1.onclick = () => {
+    destroy();
+    switchPage('detail');
+  };
 
-  $item2.onclick = () => {};
+  $item2.onclick = () => {
+    destroy();
+    switchPage('detail');
+  };
 
   $button1.onclick = () => {
     //eliminate();
