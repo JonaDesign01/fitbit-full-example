@@ -30,7 +30,7 @@ function draw() {
         let touch = tile.getElementById('touch');
         touch.onclick = function () {
           setStateItem('detailId', info.value.id);
-          switchPage('detail');
+          switchPage('detail', true);
         };
       }
     },

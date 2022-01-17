@@ -1,6 +1,7 @@
 import { inbox } from 'file-transfer';
 import * as filesystem from 'fs';
 import * as messaging from 'messaging';
+//import * as jpeg from 'jpeg';
 
 const state = {
   listData: [],
@@ -10,6 +11,7 @@ const state = {
   letter: '',
   companionTimestamp: 0,
   location: '',
+  map: '',
   // add other state-items here
 };
 // set callbacks so you can interact with this in your views
@@ -90,12 +92,24 @@ function processFiles() {
         if (typeof data[key] !== 'undefined') state[key] = data[key];
       });
 
-      /*else if (fileName === 'location.cbor') {
-        const data = filesystem.readFileSync(fileName, 'cbor');
+      updateState();
+      callback();
+    } else if (fileName === 'location.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
 
-        Object.keys(state).forEach((key) => {
-          if (typeof data[key] !== 'undefined') state[key] = data[key];
-        });*/
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      updateState();
+      callback();
+    } else if (fileName.indexOf('map-') >= 0) {
+      if (state.map) {
+        filesystem.unlinkSync(state.map);
+      }
+      const outFileName = `${fileName}.txi`;
+      //jpeg.decodeSync(fileName, outFileName);
+      state.map = `/private/data/${outFileName}`;
 
       updateState();
       callback();
