@@ -4,9 +4,9 @@
 
 <use id="buttonHam" href="#icon-button" x="65%" y="100%-240" class="large-button application-fill plus-button"/>
 
-
-
     <rect id="vl" x="170"  width="5" height="400" fill="white"/>
 
 
+
+    
 </svg>

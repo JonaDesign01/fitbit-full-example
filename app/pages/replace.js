@@ -6,10 +6,6 @@ let $button = null;
 let $letter = null;
 let $timestamp = null;
 
-function doSomething() {
-  console.log('hallo replace');
-}
-
 function draw() {
   const letter = getStateItem('letter');
   const timestamp = getStateItem('companionTimestamp');
@@ -42,6 +38,5 @@ export function init() {
   };
 
   setStateCallback('replace', draw);
-  doSomething();
   draw();
 }

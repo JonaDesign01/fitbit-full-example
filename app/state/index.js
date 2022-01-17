@@ -3,6 +3,8 @@ import * as filesystem from 'fs';
 import * as messaging from 'messaging';
 
 const state = {
+  listData: [],
+  ListItem: null,
   items: [],
   list: [],
   letter: '',
@@ -10,7 +12,6 @@ const state = {
   location: '',
   // add other state-items here
 };
-
 // set callbacks so you can interact with this in your views
 // could be optimised though, as it calls for every updated value, so not specific
 const callbacks = {};
@@ -73,12 +74,28 @@ function processFiles() {
 
       updateState();
       callback();
-    } else if (fileName === 'location.cbor') {
+    } else if (fileName === 'listData.cbor') {
       const data = filesystem.readFileSync(fileName, 'cbor');
 
       Object.keys(state).forEach((key) => {
         if (typeof data[key] !== 'undefined') state[key] = data[key];
       });
+
+      updateState();
+      callback();
+    } else if (fileName === 'listItem.cbor') {
+      const data = filesystem.readFileSync(fileName, 'cbor');
+
+      Object.keys(state).forEach((key) => {
+        if (typeof data[key] !== 'undefined') state[key] = data[key];
+      });
+
+      /*else if (fileName === 'location.cbor') {
+        const data = filesystem.readFileSync(fileName, 'cbor');
+
+        Object.keys(state).forEach((key) => {
+          if (typeof data[key] !== 'undefined') state[key] = data[key];
+        });*/
 
       updateState();
       callback();
