@@ -1,5 +1,5 @@
 import document from 'document';
-import { getLocationName } from '../commands';
+import { getLocationName, getListItem } from '../commands';
 import { switchPage } from '../navigation';
 import { getStateItem, setStateCallback, removeStateCallback } from '../state';
 
@@ -8,7 +8,10 @@ let $locationName = null;
 let $map = null;
 
 function draw() {
-  $locationName.text = getStateItem('location');
+  const item = getStateItem('listItem');
+  if (item) {
+    $locationName.text = item.name;
+  }
 
   if (getStateItem('map')) {
     $map.href = getStateItem('map');
@@ -20,7 +23,7 @@ export function destroy() {
   $locationName = null;
   $button = null;
   $map = null;
-  removeStateCallback('detail');
+  removeStateCallback('detaillijst');
 }
 
 export function init() {
@@ -34,6 +37,7 @@ export function init() {
   };
 
   getLocationName();
-  setStateCallback('detail', draw);
+  getListItem(getStateItem('detaillijstId'));
+  setStateCallback('detaillijst', draw);
   // draw();
 }
