@@ -3,7 +3,7 @@ import { outbox } from 'file-transfer';
 import { settingsStorage } from 'settings';
 import * as messaging from 'messaging';
 import { geolocation } from 'geolocation';
-//import { Image } from 'image';
+import { Image } from 'image';
 import { API_KEY } from './keys';
 import { data } from './data';
 
@@ -84,9 +84,11 @@ async function getListData() {
       id: item.id,
     };
   });
+
+  console.log(listData);
   outbox
     .enqueue('listData.cbor', cbor.encode({ listData }))
-    .then(() => console.log(location + ' as location sent'))
+    .then(() => console.log('listData sent'))
     .catch((error) => console.log(`send error: ${error}`));
 }
 
@@ -99,14 +101,10 @@ async function getListItem(id) {
 
   outbox
     .enqueue('listItem.cbor', cbor.encode({ listItem }))
-    .then(() => console.log(location + ' listItem sent'))
+    .then(() => console.log(' listItem sent'))
     .catch((error) => console.log(`send error: ${error}`));
 }
 
-getListData();
-getListItem('1');
-getListItem('2');
-getListItem('3');
 
 /* Get Map */
 async function getMap(coords) {

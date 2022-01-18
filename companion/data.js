@@ -19,14 +19,14 @@ export const data = [
   },
   {
     name: 'Locatie 4',
-    value: 'test-3',
+    value: 'test-4',
     user: 'dennis',
-    id: '3',
+    id: '4',
   },
   {
     name: 'Locatie 5',
-    value: 'test-3',
+    value: 'test-5',
     user: 'dennis',
-    id: '3',
+    id: '5',
   },
 ];

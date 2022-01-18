@@ -1,7 +1,7 @@
 import { inbox } from 'file-transfer';
 import * as filesystem from 'fs';
 import * as messaging from 'messaging';
-//import * as jpeg from 'jpeg';
+import * as jpeg from 'jpeg';
 
 const state = {
   listData: [],
@@ -108,7 +108,7 @@ function processFiles() {
         filesystem.unlinkSync(state.map);
       }
       const outFileName = `${fileName}.txi`;
-      //jpeg.decodeSync(fileName, outFileName);
+      jpeg.decodeSync(fileName, outFileName);
       state.map = `/private/data/${outFileName}`;
 
       updateState();
